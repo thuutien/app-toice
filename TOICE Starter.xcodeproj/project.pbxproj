@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		846C2E631CCF951200E96BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E621CCF951200E96BFA /* AppDelegate.swift */; };
+		846C2E651CCF951200E96BFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E641CCF951200E96BFA /* ViewController.swift */; };
+		846C2E681CCF951200E96BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C2E661CCF951200E96BFA /* Main.storyboard */; };
+		846C2E6B1CCF951200E96BFA /* TOICE_Starter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E691CCF951200E96BFA /* TOICE_Starter.xcdatamodeld */; };
+		846C2E6D1CCF951200E96BFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846C2E6C1CCF951200E96BFA /* Assets.xcassets */; };
+		846C2E701CCF951200E96BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C2E6E1CCF951200E96BFA /* LaunchScreen.storyboard */; };
+		846C2E7B1CCF951200E96BFA /* TOICE_StarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E7A1CCF951200E96BFA /* TOICE_StarterTests.swift */; };
+		846C2E861CCF951200E96BFA /* TOICE_StarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E851CCF951200E96BFA /* TOICE_StarterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		846C2E771CCF951200E96BFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 846C2E571CCF951200E96BFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 846C2E5E1CCF951200E96BFA;
+			remoteInfo = "TOICE Starter";
+		};
+		846C2E821CCF951200E96BFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 846C2E571CCF951200E96BFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 846C2E5E1CCF951200E96BFA;
+			remoteInfo = "TOICE Starter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		846C2E5F1CCF951200E96BFA /* TOICE Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TOICE Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		846C2E621CCF951200E96BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		846C2E641CCF951200E96BFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		846C2E671CCF951200E96BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		846C2E6A1CCF951200E96BFA /* TOICE_Starter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TOICE_Starter.xcdatamodel; sourceTree = "<group>"; };
+		846C2E6C1CCF951200E96BFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		846C2E6F1CCF951200E96BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		846C2E711CCF951200E96BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846C2E761CCF951200E96BFA /* TOICE StarterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOICE StarterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		846C2E7A1CCF951200E96BFA /* TOICE_StarterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOICE_StarterTests.swift; sourceTree = "<group>"; };
+		846C2E7C1CCF951200E96BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846C2E811CCF951200E96BFA /* TOICE StarterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOICE StarterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		846C2E851CCF951200E96BFA /* TOICE_StarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOICE_StarterUITests.swift; sourceTree = "<group>"; };
+		846C2E871CCF951200E96BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		846C2E5C1CCF951200E96BFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846C2E731CCF951200E96BFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846C2E7E1CCF951200E96BFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		846C2E561CCF951200E96BFA = {
+			isa = PBXGroup;
+			children = (
+				846C2E611CCF951200E96BFA /* TOICE Starter */,
+				846C2E791CCF951200E96BFA /* TOICE StarterTests */,
+				846C2E841CCF951200E96BFA /* TOICE StarterUITests */,
+				846C2E601CCF951200E96BFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		846C2E601CCF951200E96BFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				846C2E5F1CCF951200E96BFA /* TOICE Starter.app */,
+				846C2E761CCF951200E96BFA /* TOICE StarterTests.xctest */,
+				846C2E811CCF951200E96BFA /* TOICE StarterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		846C2E611CCF951200E96BFA /* TOICE Starter */ = {
+			isa = PBXGroup;
+			children = (
+				846C2E621CCF951200E96BFA /* AppDelegate.swift */,
+				846C2E641CCF951200E96BFA /* ViewController.swift */,
+				846C2E661CCF951200E96BFA /* Main.storyboard */,
+				846C2E6C1CCF951200E96BFA /* Assets.xcassets */,
+				846C2E6E1CCF951200E96BFA /* LaunchScreen.storyboard */,
+				846C2E711CCF951200E96BFA /* Info.plist */,
+				846C2E691CCF951200E96BFA /* TOICE_Starter.xcdatamodeld */,
+			);
+			path = "TOICE Starter";
+			sourceTree = "<group>";
+		};
+		846C2E791CCF951200E96BFA /* TOICE StarterTests */ = {
+			isa = PBXGroup;
+			children = (
+				846C2E7A1CCF951200E96BFA /* TOICE_StarterTests.swift */,
+				846C2E7C1CCF951200E96BFA /* Info.plist */,
+			);
+			path = "TOICE StarterTests";
+			sourceTree = "<group>";
+		};
+		846C2E841CCF951200E96BFA /* TOICE StarterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				846C2E851CCF951200E96BFA /* TOICE_StarterUITests.swift */,
+				846C2E871CCF951200E96BFA /* Info.plist */,
+			);
+			path = "TOICE StarterUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		846C2E5E1CCF951200E96BFA /* TOICE Starter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846C2E8A1CCF951200E96BFA /* Build configuration list for PBXNativeTarget "TOICE Starter" */;
+			buildPhases = (
+				846C2E5B1CCF951200E96BFA /* Sources */,
+				846C2E5C1CCF951200E96BFA /* Frameworks */,
+				846C2E5D1CCF951200E96BFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TOICE Starter";
+			productName = "TOICE Starter";
+			productReference = 846C2E5F1CCF951200E96BFA /* TOICE Starter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		846C2E751CCF951200E96BFA /* TOICE StarterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846C2E8D1CCF951200E96BFA /* Build configuration list for PBXNativeTarget "TOICE StarterTests" */;
+			buildPhases = (
+				846C2E721CCF951200E96BFA /* Sources */,
+				846C2E731CCF951200E96BFA /* Frameworks */,
+				846C2E741CCF951200E96BFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				846C2E781CCF951200E96BFA /* PBXTargetDependency */,
+			);
+			name = "TOICE StarterTests";
+			productName = "TOICE StarterTests";
+			productReference = 846C2E761CCF951200E96BFA /* TOICE StarterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		846C2E801CCF951200E96BFA /* TOICE StarterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 846C2E901CCF951200E96BFA /* Build configuration list for PBXNativeTarget "TOICE StarterUITests" */;
+			buildPhases = (
+				846C2E7D1CCF951200E96BFA /* Sources */,
+				846C2E7E1CCF951200E96BFA /* Frameworks */,
+				846C2E7F1CCF951200E96BFA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				846C2E831CCF951200E96BFA /* PBXTargetDependency */,
+			);
+			name = "TOICE StarterUITests";
+			productName = "TOICE StarterUITests";
+			productReference = 846C2E811CCF951200E96BFA /* TOICE StarterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		846C2E571CCF951200E96BFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Mango Solution";
+				TargetAttributes = {
+					846C2E5E1CCF951200E96BFA = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					846C2E751CCF951200E96BFA = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 846C2E5E1CCF951200E96BFA;
+					};
+					846C2E801CCF951200E96BFA = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 846C2E5E1CCF951200E96BFA;
+					};
+				};
+			};
+			buildConfigurationList = 846C2E5A1CCF951200E96BFA /* Build configuration list for PBXProject "TOICE Starter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 846C2E561CCF951200E96BFA;
+			productRefGroup = 846C2E601CCF951200E96BFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				846C2E5E1CCF951200E96BFA /* TOICE Starter */,
+				846C2E751CCF951200E96BFA /* TOICE StarterTests */,
+				846C2E801CCF951200E96BFA /* TOICE StarterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		846C2E5D1CCF951200E96BFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846C2E701CCF951200E96BFA /* LaunchScreen.storyboard in Resources */,
+				846C2E6D1CCF951200E96BFA /* Assets.xcassets in Resources */,
+				846C2E681CCF951200E96BFA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846C2E741CCF951200E96BFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846C2E7F1CCF951200E96BFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		846C2E5B1CCF951200E96BFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846C2E651CCF951200E96BFA /* ViewController.swift in Sources */,
+				846C2E631CCF951200E96BFA /* AppDelegate.swift in Sources */,
+				846C2E6B1CCF951200E96BFA /* TOICE_Starter.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846C2E721CCF951200E96BFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846C2E7B1CCF951200E96BFA /* TOICE_StarterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846C2E7D1CCF951200E96BFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846C2E861CCF951200E96BFA /* TOICE_StarterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		846C2E781CCF951200E96BFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 846C2E5E1CCF951200E96BFA /* TOICE Starter */;
+			targetProxy = 846C2E771CCF951200E96BFA /* PBXContainerItemProxy */;
+		};
+		846C2E831CCF951200E96BFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 846C2E5E1CCF951200E96BFA /* TOICE Starter */;
+			targetProxy = 846C2E821CCF951200E96BFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		846C2E661CCF951200E96BFA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846C2E671CCF951200E96BFA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		846C2E6E1CCF951200E96BFA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				846C2E6F1CCF951200E96BFA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		846C2E881CCF951200E96BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		846C2E891CCF951200E96BFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		846C2E8B1CCF951200E96BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TOICE Starter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango.TOICE-Starter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		846C2E8C1CCF951200E96BFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "TOICE Starter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango.TOICE-Starter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		846C2E8E1CCF951200E96BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TOICE StarterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango.TOICE-StarterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TOICE Starter.app/TOICE Starter";
+			};
+			name = Debug;
+		};
+		846C2E8F1CCF951200E96BFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "TOICE StarterTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango.TOICE-StarterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TOICE Starter.app/TOICE Starter";
+			};
+			name = Release;
+		};
+		846C2E911CCF951200E96BFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TOICE StarterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango.TOICE-StarterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "TOICE Starter";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		846C2E921CCF951200E96BFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "TOICE StarterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mango.TOICE-StarterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "TOICE Starter";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		846C2E5A1CCF951200E96BFA /* Build configuration list for PBXProject "TOICE Starter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846C2E881CCF951200E96BFA /* Debug */,
+				846C2E891CCF951200E96BFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846C2E8A1CCF951200E96BFA /* Build configuration list for PBXNativeTarget "TOICE Starter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846C2E8B1CCF951200E96BFA /* Debug */,
+				846C2E8C1CCF951200E96BFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846C2E8D1CCF951200E96BFA /* Build configuration list for PBXNativeTarget "TOICE StarterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846C2E8E1CCF951200E96BFA /* Debug */,
+				846C2E8F1CCF951200E96BFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		846C2E901CCF951200E96BFA /* Build configuration list for PBXNativeTarget "TOICE StarterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				846C2E911CCF951200E96BFA /* Debug */,
+				846C2E921CCF951200E96BFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		846C2E691CCF951200E96BFA /* TOICE_Starter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				846C2E6A1CCF951200E96BFA /* TOICE_Starter.xcdatamodel */,
+			);
+			currentVersion = 846C2E6A1CCF951200E96BFA /* TOICE_Starter.xcdatamodel */;
+			path = TOICE_Starter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 846C2E571CCF951200E96BFA /* Project object */;
+}
