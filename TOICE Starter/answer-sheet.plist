@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>identifier</key>
+		<integer>0</integer>
+		<key>vocabulary</key>
+		<string>xin chao</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>1</integer>
+		<key>vocabulary</key>
+		<string>tam biet</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>2</integer>
+		<key>vocabulary</key>
+		<string>chao</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>0</integer>
+		<key>vocabulary</key>
+		<string>chao2</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>4</integer>
+		<key>vocabulary</key>
+		<string>cusotmer</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>5</integer>
+		<key>vocabulary</key>
+		<string>khach hang</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>6</integer>
+		<key>vocabulary</key>
+		<string>doanh nghiep</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>7</integer>
+		<key>vocabulary</key>
+		<string>nhac may</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>8</integer>
+		<key>vocabulary</key>
+		<string>di xa</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>9</integer>
+		<key>vocabulary</key>
+		<string>dung mot minh</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>10</integer>
+		<key>vocabulary</key>
+		<string>cut xeo</string>
+	</dict>
+</array>
+</plist>

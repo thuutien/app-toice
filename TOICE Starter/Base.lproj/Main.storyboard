@@ -18,8 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hd-d5-M2x">
+                            <pickerView clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="4Hd-d5-M2x">
                                 <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="dq3-Ru-X4J"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="WIC-AR-tGe"/>

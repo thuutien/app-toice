@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>identifier</key>
+		<integer>0</integer>
+		<key>vocabulary</key>
+		<string>hello</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>1</integer>
+		<key>vocabulary</key>
+		<string>goodbye</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>2</integer>
+		<key>vocabulary</key>
+		<string>hello</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>0</integer>
+		<key>vocabulary</key>
+		<string>hello</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>4</integer>
+		<key>vocabulary</key>
+		<string>cusotmer</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>5</integer>
+		<key>vocabulary</key>
+		<string>consumer</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>6</integer>
+		<key>vocabulary</key>
+		<string>business</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>7</integer>
+		<key>vocabulary</key>
+		<string>pickup</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>8</integer>
+		<key>vocabulary</key>
+		<string>go away</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>9</integer>
+		<key>vocabulary</key>
+		<string>stand alone</string>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<integer>10</integer>
+		<key>vocabulary</key>
+		<string>get out</string>
+	</dict>
+</array>
+</plist>

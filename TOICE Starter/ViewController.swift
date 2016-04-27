@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var selectAnswer = ""
     var score = 0
     var answerData = ["Bac Ky","Trung Ky","Name Ky","Tay Ky"]
+    var words = [Word]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         selectAnswer = answerData[0]
         scoreLabel.text = "0"
         
+        //Load word from plist
+        words = Word.loadAllWords("vocabulary")
        
     }
 
@@ -41,15 +44,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return answerData.count
+        return words.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return answerData[row]
+            return words[row].vocabulary
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        selectAnswer = answerData[row]
+        selectAnswer = words[row].vocabulary
         
     }
     
