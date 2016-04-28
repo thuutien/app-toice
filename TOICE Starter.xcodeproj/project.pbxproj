@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8444177B1CD0F5FD00F4C722 /* vocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8444177A1CD0F5FD00F4C722 /* vocabulary.plist */; };
-		8444177D1CD0F73300F4C722 /* answer-sheet.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8444177C1CD0F73300F4C722 /* answer-sheet.plist */; };
 		844417801CD0F81000F4C722 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8444177F1CD0F81000F4C722 /* Vocabulary.swift */; };
+		8469DD1C1CD25AE90016F747 /* MakeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469DD1B1CD25AE90016F747 /* MakeRandom.swift */; };
 		846C2E631CCF951200E96BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E621CCF951200E96BFA /* AppDelegate.swift */; };
 		846C2E651CCF951200E96BFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E641CCF951200E96BFA /* ViewController.swift */; };
 		846C2E681CCF951200E96BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C2E661CCF951200E96BFA /* Main.storyboard */; };
@@ -39,8 +39,9 @@
 
 /* Begin PBXFileReference section */
 		8444177A1CD0F5FD00F4C722 /* vocabulary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = vocabulary.plist; path = "TOICE Starter/vocabulary.plist"; sourceTree = "<group>"; };
-		8444177C1CD0F73300F4C722 /* answer-sheet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "answer-sheet.plist"; path = "TOICE Starter/answer-sheet.plist"; sourceTree = "<group>"; };
 		8444177F1CD0F81000F4C722 /* Vocabulary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
+		8469DD1A1CD256790016F747 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		8469DD1B1CD25AE90016F747 /* MakeRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRandom.swift; sourceTree = "<group>"; };
 		846C2E5F1CCF951200E96BFA /* TOICE Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TOICE Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C2E621CCF951200E96BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846C2E641CCF951200E96BFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,8 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				8444177F1CD0F81000F4C722 /* Vocabulary.swift */,
-				8444177C1CD0F73300F4C722 /* answer-sheet.plist */,
 				8444177A1CD0F5FD00F4C722 /* vocabulary.plist */,
+				8469DD1B1CD25AE90016F747 /* MakeRandom.swift */,
 			);
 			name = Data;
 			path = ..;
@@ -124,6 +125,7 @@
 				846C2E711CCF951200E96BFA /* Info.plist */,
 				846C2E691CCF951200E96BFA /* TOICE_Starter.xcdatamodeld */,
 				8444177E1CD0F73E00F4C722 /* Data */,
+				8469DD1A1CD256790016F747 /* MyPlayground.playground */,
 			);
 			path = "TOICE Starter";
 			sourceTree = "<group>";
@@ -251,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				846C2E701CCF951200E96BFA /* LaunchScreen.storyboard in Resources */,
-				8444177D1CD0F73300F4C722 /* answer-sheet.plist in Resources */,
 				846C2E6D1CCF951200E96BFA /* Assets.xcassets in Resources */,
 				846C2E681CCF951200E96BFA /* Main.storyboard in Resources */,
 				8444177B1CD0F5FD00F4C722 /* vocabulary.plist in Resources */,
@@ -280,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846C2E651CCF951200E96BFA /* ViewController.swift in Sources */,
+				8469DD1C1CD25AE90016F747 /* MakeRandom.swift in Sources */,
 				844417801CD0F81000F4C722 /* Vocabulary.swift in Sources */,
 				846C2E631CCF951200E96BFA /* AppDelegate.swift in Sources */,
 				846C2E6B1CCF951200E96BFA /* TOICE_Starter.xcdatamodeld in Sources */,

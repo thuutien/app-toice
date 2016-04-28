@@ -20,17 +20,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var score = 0
     var answerData = ["Bac Ky","Trung Ky","Name Ky","Tay Ky"]
     var words = [Word]()
+    var newWords = [Word]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Add datasource and delegate
         self.answerPickerView.dataSource = self
         self.answerPickerView.delegate = self
+        
+        //MARK: Setup data
         selectAnswer = answerData[0]
         scoreLabel.text = "0"
         
         //Load word from plist
         words = Word.loadAllWords("vocabulary")
+        newWords = getRandomWord(words)
+        
        
     }
 
@@ -39,23 +45,40 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //============================================================
+    //MARK: UIPickerView datasource
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return words.count
+        return newWords.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return words[row].vocabulary
+            return newWords[row].vocabulary
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        selectAnswer = words[row].vocabulary
+        selectAnswer = newWords[row].vocabulary
         
     }
-    
+    //MARK: Get random data from array
+    func getRandomWord(var wordArray: [Word]) -> [Word] {
+        var newArray: [Word] = []
+        for var i in 0..<5 {
+            let randomValue = arc4random_uniform(UInt32(wordArray.count))
+            newArray.append(wordArray[Int(randomValue)])
+            i += i
+        }
+        
+        return newArray
+    }
+   
+
+    //============================================================
+    //MARK: Actions
     @IBAction func sendAnwserButon(sender: AnyObject) {
         vocabularyLabel.text = selectAnswer
         score += 1
@@ -66,6 +89,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             scoreLabel.text = "fucking bitch"
         }
         
+        newWords = getRandomWord(words)
+        answerPickerView.reloadAllComponents()
     }
     
 
