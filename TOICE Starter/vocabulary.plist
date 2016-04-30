@@ -7,66 +7,88 @@
 		<integer>0</integer>
 		<key>vocabulary</key>
 		<string>hello</string>
+		<key>meaning</key>
+		<string>xin chào</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
 		<integer>1</integer>
 		<key>vocabulary</key>
 		<string>goodbye</string>
+		<key>meaning</key>
+		<string>tạm biệt</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
 		<integer>2</integer>
 		<key>vocabulary</key>
-		<string>hello</string>
+		<string>idea</string>
+		<key>meaning</key>
+		<string>ý tưởng</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<integer>0</integer>
+		<integer>3</integer>
 		<key>vocabulary</key>
-		<string>hello</string>
+		<string>run away</string>
+		<key>meaning</key>
+		<string>chạy thật xa</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
 		<integer>4</integer>
 		<key>vocabulary</key>
-		<string>cusotmer</string>
+		<string>get intouch</string>
+		<key>meaning</key>
+		<string>giữ liên lạc</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
 		<integer>5</integer>
 		<key>vocabulary</key>
-		<string>consumer</string>
+		<string>pass away</string>
+		<key>meaning</key>
+		<string>mất, hi sinh</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
 		<integer>6</integer>
 		<key>vocabulary</key>
-		<string>business</string>
+		<string>fuck you bitch</string>
+		<key>meaning</key>
+		<string>địt mẹ bạn</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
 		<integer>7</integer>
 		<key>vocabulary</key>
-		<string>pickup</string>
+		<string>stupid man</string>
+		<key>meaning</key>
+		<string>thằng ngu</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
 		<integer>8</integer>
 		<key>vocabulary</key>
-		<string>go away</string>
+		<string>heart beat</string>
+		<key>meaning</key>
+		<string>nhịp tim</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
 		<integer>9</integer>
 		<key>vocabulary</key>
-		<string>stand alone</string>
+		<string>dog</string>
+		<key>meaning</key>
+		<string>con chó</string>
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<integer>10</integer>
+		<integer>0</integer>
 		<key>vocabulary</key>
-		<string>get out</string>
+		<string>do business</string>
+		<key>meaning</key>
+		<string>đi vệ sinh</string>
 	</dict>
 </array>
 </plist>

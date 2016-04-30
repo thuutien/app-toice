@@ -12,6 +12,7 @@ import Foundation
 struct  Word {
     let identifier: Int
     let vocabulary: String
+    let meaning: String
     
 }
 
@@ -36,14 +37,16 @@ extension Word {
         for dict in dictArray {
             guard
                 let identifier          = dict["identifier"]          as? Int,
-                let vocabulary          = dict["vocabulary"]          as? String
+                let vocabulary          = dict["vocabulary"]          as? String ,
+                let meaning             = dict["meaning"]             as? String
                 else {
                     fatalError("Error parsing dict \(dict)")
             }
             
             let word = Word(
-                identifier: identifier,
-                vocabulary: vocabulary
+                identifier: identifier ,
+                vocabulary: vocabulary ,
+                meaning: meaning
             )
             
             words.append(word)

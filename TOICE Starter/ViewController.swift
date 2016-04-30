@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var selectAnswer = ""
     var score = 0
-    var answerData = ["Bac Ky","Trung Ky","Name Ky","Tay Ky"]
+    //var answerData = ["Bac Ky","Trung Ky","Name Ky","Tay Ky"]
     var words = [Word]()
     var newWords = [Word]()
     
@@ -30,12 +30,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.answerPickerView.delegate = self
         
         //MARK: Setup data
-        selectAnswer = answerData[0]
         scoreLabel.text = "0"
         
         //Load word from plist
         words = Word.loadAllWords("vocabulary")
-        newWords = getRandomWord(words)
+        newWords = makeRandomArray(words)
         
        
     }
@@ -64,22 +63,33 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         selectAnswer = newWords[row].vocabulary
         
     }
+    
+    
+    
     //MARK: Get random data from array
-    func getRandomWord(var wordArray: [Word]) -> [Word] {
+    func makeRandomArray( wordArray: [Word]) -> [Word] {
         var newArray: [Word] = []
-        for var i in 0..<5 {
+        for var i in 0..<3 {
             let randomValue = arc4random_uniform(UInt32(wordArray.count))
             newArray.append(wordArray[Int(randomValue)])
+            //wordArray.removeAtIndex(Int(randomValue))
             i += i
         }
         
         return newArray
+    }
+    //get random word from array
+    func getRandomFromArray(wordArray: [Word]) -> Word {
+        let randomValue = arc4random_uniform(UInt32(wordArray.count))
+        let randomWord = wordArray[Int(randomValue)]
+        return randomWord
     }
    
 
     //============================================================
     //MARK: Actions
     @IBAction func sendAnwserButon(sender: AnyObject) {
+        
         vocabularyLabel.text = selectAnswer
         score += 1
         if score <= 10 {
