@@ -18,7 +18,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var selectAnswer = ""
     var score = 0
-    //var answerData = ["Bac Ky","Trung Ky","Name Ky","Tay Ky"]
     var words = [Word]()
     var newWords = [Word]()
     
@@ -33,8 +32,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         scoreLabel.text = "0"
         
         //Load word from plist
-        words = Word.loadAllWords("vocabulary")
-        newWords = makeRandomArray(words)
+        words = Word.loadAllWords("vocabulary").shuffle()
+        newWords = get3Words(words)
+        
         
        
     }
@@ -56,7 +56,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return newWords[row].vocabulary
+            return newWords[row].meaning
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
@@ -66,30 +66,55 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     
-    //MARK: Get random data from array
-    func makeRandomArray( wordArray: [Word]) -> [Word] {
-        var newArray: [Word] = []
-        for var i in 0..<3 {
-            let randomValue = arc4random_uniform(UInt32(wordArray.count))
-            newArray.append(wordArray[Int(randomValue)])
-            //wordArray.removeAtIndex(Int(randomValue))
-            i += i
+    
+    
+    //MARK: Get random data from array --> bi duplicate
+    
+    //get random word from array
+    
+    //New randome function
+    
+    func getRandomFromArray(myArray: [Word]) -> Word {
+        let randomIndex = arc4random_uniform(UInt32(myArray.count))
+        return myArray[Int(randomIndex)]
+        
+    }
+    
+    func get3Words(myArray: [Word]) -> [Word] {
+        var newArray:[Word] = []
+        let word1:Word = getRandomFromArray(myArray)
+        newArray.append(word1)
+        
+        var word2: Word = getRandomFromArray(myArray)
+        for var i in 0..<myArray.count{
+            if word2.identifier != word1.identifier {
+                newArray.append(word2)
+                break
+            }else {
+                word2 = getRandomFromArray(myArray)
+            }
+            i += 1
         }
         
+        var word3: Word = getRandomFromArray(myArray)
+        for var i in 0..<myArray.count{
+            if word3.identifier != word1.identifier && word3.identifier != word2.identifier {
+                newArray.append(word3)
+                break
+            }else {
+                word3 = getRandomFromArray(myArray)
+            }
+            i += 1
+        }
         return newArray
     }
-    //get random word from array
-    func getRandomFromArray(wordArray: [Word]) -> Word {
-        let randomValue = arc4random_uniform(UInt32(wordArray.count))
-        let randomWord = wordArray[Int(randomValue)]
-        return randomWord
-    }
-   
+    
+    
 
     //============================================================
     //MARK: Actions
     @IBAction func sendAnwserButon(sender: AnyObject) {
-        
+        newWords = get3Words(words)
         vocabularyLabel.text = selectAnswer
         score += 1
         if score <= 10 {
@@ -99,7 +124,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             scoreLabel.text = "fucking bitch"
         }
         
-        newWords = getRandomWord(words)
+        //newWords = getRandomWord(words)
         answerPickerView.reloadAllComponents()
     }
     

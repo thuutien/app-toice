@@ -24,6 +24,10 @@ extension Word {
         return loadWordFromPlistNamed(fileName)
     }
     
+    static func makeRandomeArrayTest (arrayName: [Word]) -> [Word] {
+        return arrayName.shuffle()
+    }
+    
     private static func loadWordFromPlistNamed(plistName: String) -> [Word] {
         guard
             let path = NSBundle.mainBundle().pathForResource(plistName, ofType: "plist"),
@@ -55,3 +59,21 @@ extension Word {
         return words
     }
 }
+
+extension MutableCollectionType where Self.Index == Int {
+    func shuffle() -> Self {
+        var r = self
+        let c = self.count
+        for i in 0..<(c - 1) {
+            let j = Int(arc4random_uniform(UInt32(c - i))) + i
+            if i != j {
+                swap(&r[i], &r[j])
+            }
+        }
+        return r
+    }
+}
+
+
+
+
