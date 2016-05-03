@@ -70,39 +70,44 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     //MARK: Get random data from array --> bi duplicate
     
-    //get random word from array
-    
     //New randome function
     
-    func getRandomFromArray(myArray: [Word]) -> Word {
-        let randomIndex = arc4random_uniform(UInt32(myArray.count))
-        return myArray[Int(randomIndex)]
+    func getRandomFromArray(var myArray: [Word], removeIt: Bool) -> Word {
+        if removeIt {
+            let randomIndex = arc4random_uniform(UInt32(myArray.count))
+            let newElement = myArray[Int(randomIndex)]
+            myArray.removeAtIndex(Int(randomIndex))
+            return newElement
+        }else{
+            let randomIndex = arc4random_uniform(UInt32(myArray.count))
+            return myArray[Int(randomIndex)]
+        }
         
     }
     
     func get3Words(myArray: [Word]) -> [Word] {
         var newArray:[Word] = []
-        let word1:Word = getRandomFromArray(myArray)
+        let word1:Word = getRandomFromArray(myArray, removeIt: true)
         newArray.append(word1)
         
-        var word2: Word = getRandomFromArray(myArray)
+        var word2: Word = getRandomFromArray(myArray, removeIt: false)
         for var i in 0..<myArray.count{
             if word2.identifier != word1.identifier {
                 newArray.append(word2)
                 break
             }else {
-                word2 = getRandomFromArray(myArray)
+                word2 = getRandomFromArray(myArray, removeIt: false)
             }
             i += 1
         }
         
-        var word3: Word = getRandomFromArray(myArray)
+        var word3: Word = getRandomFromArray(myArray, removeIt: false)
         for var i in 0..<myArray.count{
             if word3.identifier != word1.identifier && word3.identifier != word2.identifier {
                 newArray.append(word3)
                 break
             }else {
-                word3 = getRandomFromArray(myArray)
+                word3 = getRandomFromArray(myArray, removeIt: false)
             }
             i += 1
         }
@@ -126,6 +131,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         //newWords = getRandomWord(words)
         answerPickerView.reloadAllComponents()
+      
     }
     
 
