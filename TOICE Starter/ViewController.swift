@@ -20,6 +20,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var score = 0
     var words = [Word]()
     var newWords = [Word]()
+    var shuffleNewWords: [Word] = []
+    let numberOfWords = 7
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         //Load word from plist
         words = Word.loadAllWords("vocabulary").shuffle()
-        newWords = get3Words(words)
+        makeRandomeAndRemove()
+        vocabularyLabel.text = newWords[0].vocabulary
+        shuffleNewWords = newWords.shuffle()
         
         
        
@@ -52,66 +56,29 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return newWords.count
+        return shuffleNewWords.count
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return newWords[row].meaning
+            return shuffleNewWords[row].meaning
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        selectAnswer = newWords[row].vocabulary
+        selectAnswer = shuffleNewWords[row].vocabulary
         
     }
     
     
     
     
-    
-    //MARK: Get random data from array --> bi duplicate
-    
-    //New randome function
-    
-    func getRandomFromArray(var myArray: [Word], removeIt: Bool) -> Word {
-        if removeIt {
-            let randomIndex = arc4random_uniform(UInt32(myArray.count))
-            let newElement = myArray[Int(randomIndex)]
-            myArray.removeAtIndex(Int(randomIndex))
-            return newElement
-        }else{
-            let randomIndex = arc4random_uniform(UInt32(myArray.count))
-            return myArray[Int(randomIndex)]
+    //============================================================
+    //MARK: Get random data from array 
+    func makeRandomeAndRemove () {
+        words = words.shuffle()
+        for i in 0..<3 {
+            newWords.append(words[i])
         }
-        
-    }
-    
-    func get3Words(myArray: [Word]) -> [Word] {
-        var newArray:[Word] = []
-        let word1:Word = getRandomFromArray(myArray, removeIt: true)
-        newArray.append(word1)
-        
-        var word2: Word = getRandomFromArray(myArray, removeIt: false)
-        for var i in 0..<myArray.count{
-            if word2.identifier != word1.identifier {
-                newArray.append(word2)
-                break
-            }else {
-                word2 = getRandomFromArray(myArray, removeIt: false)
-            }
-            i += 1
-        }
-        
-        var word3: Word = getRandomFromArray(myArray, removeIt: false)
-        for var i in 0..<myArray.count{
-            if word3.identifier != word1.identifier && word3.identifier != word2.identifier {
-                newArray.append(word3)
-                break
-            }else {
-                word3 = getRandomFromArray(myArray, removeIt: false)
-            }
-            i += 1
-        }
-        return newArray
+        words.removeAtIndex(0)
     }
     
     
@@ -119,17 +86,43 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     //============================================================
     //MARK: Actions
     @IBAction func sendAnwserButon(sender: AnyObject) {
-        newWords = get3Words(words)
-        vocabularyLabel.text = selectAnswer
-        score += 1
-        if score <= 10 {
-            scoreLabel.text = String(score)
+        
+        if score < numberOfWords {
+            if selectAnswer == newWords[0].vocabulary {
+                score = score + 1
+                scoreLabel.text = String(score)
+            }else {
+                score = 0
+                scoreLabel.text = String(score)
+                score = 0
+                let alertView = UIAlertController(title: "You lose!", message: "Press OK to retart the game", preferredStyle: .Alert)
+                alertView.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
+                alertView.addAction(UIAlertAction(title: "Score board", style: .Default, handler: nil))
+                presentViewController(alertView, animated: true, completion: nil)
+                words = Word.loadAllWords("vocabulary").shuffle()
+            }
 
-        }else{
-            scoreLabel.text = "fucking bitch"
+        } else {
+            score = 0
+            scoreLabel.text = String(score)
+            let alertView = UIAlertController(title: "You win!", message: "Press OK to retart the game", preferredStyle: .Alert)
+            alertView.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
+            alertView.addAction(UIAlertAction(title: "Score board", style: .Default, handler: nil))
+            presentViewController(alertView, animated: true, completion: nil)
+           
+            
         }
         
-        //newWords = getRandomWord(words)
+        
+        print(score)
+        
+        //Load for new round
+        newWords = []
+        makeRandomeAndRemove()
+        vocabularyLabel.text = newWords[0].vocabulary
+        shuffleNewWords = newWords.shuffle()
+        
+        //reload picker view
         answerPickerView.reloadAllComponents()
       
     }
