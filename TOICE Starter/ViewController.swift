@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var answerPickerView: UIPickerView!
     @IBOutlet weak var vocabularyLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var backGroundImageView: UIImageView!
     
     
     
@@ -20,7 +22,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var score = 0
     var words = [Word]()
     var newWords = [Word]()
-    var shuffleNewWords: [Word] = []
+    var shuffleNewWords = [Word]()
     let numberOfWords = 7
     
     override func viewDidLoad() {
@@ -29,6 +31,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Add datasource and delegate
         self.answerPickerView.dataSource = self
         self.answerPickerView.delegate = self
+        changeBackgroundWithAnimation("day_image")
         
         //MARK: Setup data
         scoreLabel.text = "0"
@@ -69,7 +72,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     
+    //==============Alert=============
     
+    func throwAlert (title: String, message: String) {
+        let alertView = UIAlertController(title: title , message: message, preferredStyle: .Alert)
+        alertView.addAction(UIAlertAction(title: "OK", style: .Destructive , handler: {(alert: UIAlertAction) in self.changeBackgroundWithAnimation("day_image")}))
+        //alertView.addAction(UIAlertAction(title: "Score board", style: .Default, handler: nil))
+        presentViewController(alertView, animated: true, completion: nil)
+    }
     
     //============================================================
     //MARK: Get random data from array 
@@ -81,6 +91,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         words.removeAtIndex(0)
     }
     
+    func reloadQuestion() {
+        //load new question
+        newWords = []
+        makeRandomeAndRemove()
+        vocabularyLabel.text = newWords[0].vocabulary     // get the word in the tile
+        shuffleNewWords = newWords.shuffle()               // get the word for selection words
+    }
+    
+    func changeBackgroundWithAnimation (imageName: String) {
+        backGroundImageView.image = UIImage(named: imageName)
+        backGroundImageView.layer.addAnimation(CATransition(), forKey: kCATransition)
+    }
+    
+    
+    
     
 
     //============================================================
@@ -88,41 +113,36 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func sendAnwserButon(sender: AnyObject) {
         
         if score < numberOfWords {
-            if selectAnswer == newWords[0].vocabulary {
+            if selectAnswer == newWords[0].vocabulary {     //anwser is correct
                 score = score + 1
                 scoreLabel.text = String(score)
-            }else {
+                
+            }else {                                        // answer is wrong
                 score = 0
                 scoreLabel.text = String(score)
-                score = 0
-                let alertView = UIAlertController(title: "You lose!", message: "Press OK to retart the game", preferredStyle: .Alert)
-                alertView.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
-                alertView.addAction(UIAlertAction(title: "Score board", style: .Default, handler: nil))
-                presentViewController(alertView, animated: true, completion: nil)
-                words = Word.loadAllWords("vocabulary").shuffle()
+                words = Word.loadAllWords("vocabulary").shuffle()                // create new word array again, restart the game
+                throwAlert("You lose!", message: "Press OK to retart the game")
             }
-
-        } else {
+        } else {                                                                // when user win the game
             score = 0
             scoreLabel.text = String(score)
-            let alertView = UIAlertController(title: "You win!", message: "Press OK to retart the game", preferredStyle: .Alert)
-            alertView.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil ))
-            alertView.addAction(UIAlertAction(title: "Score board", style: .Default, handler: nil))
-            presentViewController(alertView, animated: true, completion: nil)
-           
+            words = Word.loadAllWords("vocabulary").shuffle()
+            throwAlert("You win!", message: "Press OK to retart the game")
             
         }
         
+        // change backgrond following score
+        switch score {
+        case 3:
+            changeBackgroundWithAnimation("night_image")
+            break
+        default:
+            break
+        }
         
         print(score)
-        
-        //Load for new round
-        newWords = []
-        makeRandomeAndRemove()
-        vocabularyLabel.text = newWords[0].vocabulary
-        shuffleNewWords = newWords.shuffle()
-        
         //reload picker view
+        reloadQuestion()
         answerPickerView.reloadAllComponents()
       
     }
