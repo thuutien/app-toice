@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import AVFoundation
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
@@ -24,6 +25,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var newWords = [Word]()
     var shuffleNewWords = [Word]()
     let numberOfWords = 7
+    
+    var audioPlayer = AVAudioPlayer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +108,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         backGroundImageView.layer.addAnimation(CATransition(), forKey: kCATransition)
     }
     
+    func playSound (soundName: String, fileType: String) {
+        let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(soundName, ofType: fileType)!)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: sound)
+            audioPlayer.play()
+        }catch {
+            print("ERROR: Cannot playing sound named \(soundName)")
+        }
+        
+    }
     
     
     
@@ -114,16 +128,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         if score < numberOfWords {
             if selectAnswer == newWords[0].vocabulary {     //anwser is correct
+                playSound("correct", fileType: "mp3")
                 score = score + 1
                 scoreLabel.text = String(score)
                 
+                
             }else {                                        // answer is wrong
+                playSound("wrong", fileType: "mp3")
                 score = 0
                 scoreLabel.text = String(score)
                 words = Word.loadAllWords("vocabulary").shuffle()                // create new word array again, restart the game
                 throwAlert("You lose!", message: "Press OK to retart the game")
+                
             }
         } else {                                                                // when user win the game
+            playSound("win", fileType: "mp3")
             score = 0
             scoreLabel.text = String(score)
             words = Word.loadAllWords("vocabulary").shuffle()
@@ -140,7 +159,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             break
         }
         
-        print(score)
         //reload picker view
         reloadQuestion()
         answerPickerView.reloadAllComponents()
