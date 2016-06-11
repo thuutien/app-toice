@@ -10,8 +10,9 @@ import UIKit
 import QuartzCore
 import AVFoundation
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class WordsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var answerPickerView: UIPickerView!
     @IBOutlet weak var vocabularyLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -28,9 +29,18 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var audioPlayer = AVAudioPlayer()
     
+    var colors = ["red","green","blue"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBarHidden = true
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         // Add datasource and delegate
         self.answerPickerView.dataSource = self
@@ -45,6 +55,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         makeRandomeAndRemove()
         vocabularyLabel.text = newWords[0].vocabulary
         shuffleNewWords = newWords.shuffle()
+        
         
         
        
@@ -74,6 +85,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         selectAnswer = shuffleNewWords[row].vocabulary
         
     }
+    
     
     
     //==============Alert=============

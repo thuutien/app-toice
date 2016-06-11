@@ -14,13 +14,16 @@
 		84494F311CEA139B0020D7EE /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84494F301CEA139B0020D7EE /* win.mp3 */; };
 		8469DD1C1CD25AE90016F747 /* MakeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469DD1B1CD25AE90016F747 /* MakeRandom.swift */; };
 		846C2E631CCF951200E96BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E621CCF951200E96BFA /* AppDelegate.swift */; };
-		846C2E651CCF951200E96BFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E641CCF951200E96BFA /* ViewController.swift */; };
-		846C2E681CCF951200E96BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C2E661CCF951200E96BFA /* Main.storyboard */; };
+		846C2E651CCF951200E96BFA /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E641CCF951200E96BFA /* WordsViewController.swift */; };
 		846C2E6B1CCF951200E96BFA /* TOICE_Starter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E691CCF951200E96BFA /* TOICE_Starter.xcdatamodeld */; };
 		846C2E6D1CCF951200E96BFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846C2E6C1CCF951200E96BFA /* Assets.xcassets */; };
 		846C2E701CCF951200E96BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846C2E6E1CCF951200E96BFA /* LaunchScreen.storyboard */; };
 		846C2E7B1CCF951200E96BFA /* TOICE_StarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E7A1CCF951200E96BFA /* TOICE_StarterTests.swift */; };
 		846C2E861CCF951200E96BFA /* TOICE_StarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C2E851CCF951200E96BFA /* TOICE_StarterUITests.swift */; };
+		84EE63691D0BFF7100E90926 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE63681D0BFF7100E90926 /* SWRevealViewController.m */; };
+		84EE636D1D0C12D000E90926 /* PronounViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE636C1D0C12D000E90926 /* PronounViewController.swift */; };
+		84EE636F1D0C12E100E90926 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE636E1D0C12E100E90926 /* InfoViewController.swift */; };
+		84EE63721D0C14C500E90926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EE63701D0C14C500E90926 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +53,7 @@
 		8469DD1B1CD25AE90016F747 /* MakeRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeRandom.swift; sourceTree = "<group>"; };
 		846C2E5F1CCF951200E96BFA /* TOICE Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TOICE Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C2E621CCF951200E96BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		846C2E641CCF951200E96BFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		846C2E671CCF951200E96BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		846C2E641CCF951200E96BFA /* WordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewController.swift; sourceTree = "<group>"; };
 		846C2E6A1CCF951200E96BFA /* TOICE_Starter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TOICE_Starter.xcdatamodel; sourceTree = "<group>"; };
 		846C2E6C1CCF951200E96BFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846C2E6F1CCF951200E96BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +64,12 @@
 		846C2E811CCF951200E96BFA /* TOICE StarterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TOICE StarterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C2E851CCF951200E96BFA /* TOICE_StarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOICE_StarterUITests.swift; sourceTree = "<group>"; };
 		846C2E871CCF951200E96BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84EE63661D0BFF7100E90926 /* TOICE Starter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TOICE Starter-Bridging-Header.h"; sourceTree = "<group>"; };
+		84EE63671D0BFF7100E90926 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		84EE63681D0BFF7100E90926 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		84EE636C1D0C12D000E90926 /* PronounViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronounViewController.swift; sourceTree = "<group>"; };
+		84EE636E1D0C12E100E90926 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		84EE63711D0C14C500E90926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,10 +134,13 @@
 		846C2E611CCF951200E96BFA /* TOICE Starter */ = {
 			isa = PBXGroup;
 			children = (
+				84EE63651D0BFF5A00E90926 /* SWRevealViewController */,
 				846C2E621CCF951200E96BFA /* AppDelegate.swift */,
-				846C2E641CCF951200E96BFA /* ViewController.swift */,
-				846C2E661CCF951200E96BFA /* Main.storyboard */,
+				846C2E641CCF951200E96BFA /* WordsViewController.swift */,
+				84EE636C1D0C12D000E90926 /* PronounViewController.swift */,
+				84EE636E1D0C12E100E90926 /* InfoViewController.swift */,
 				846C2E6C1CCF951200E96BFA /* Assets.xcassets */,
+				84EE63701D0C14C500E90926 /* Main.storyboard */,
 				846C2E6E1CCF951200E96BFA /* LaunchScreen.storyboard */,
 				846C2E711CCF951200E96BFA /* Info.plist */,
 				846C2E691CCF951200E96BFA /* TOICE_Starter.xcdatamodeld */,
@@ -155,6 +166,16 @@
 				846C2E871CCF951200E96BFA /* Info.plist */,
 			);
 			path = "TOICE StarterUITests";
+			sourceTree = "<group>";
+		};
+		84EE63651D0BFF5A00E90926 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84EE63671D0BFF7100E90926 /* SWRevealViewController.h */,
+				84EE63681D0BFF7100E90926 /* SWRevealViewController.m */,
+				84EE63661D0BFF7100E90926 /* TOICE Starter-Bridging-Header.h */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,12 +240,13 @@
 		846C2E571CCF951200E96BFA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mango Solution";
 				TargetAttributes = {
 					846C2E5E1CCF951200E96BFA = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 8B2HQWVDZ7;
 					};
 					846C2E751CCF951200E96BFA = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -261,11 +283,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EE63721D0C14C500E90926 /* Main.storyboard in Resources */,
 				84494F0E1CEA0CED0020D7EE /* correct.mp3 in Resources */,
 				846C2E701CCF951200E96BFA /* LaunchScreen.storyboard in Resources */,
 				84494F311CEA139B0020D7EE /* win.mp3 in Resources */,
 				846C2E6D1CCF951200E96BFA /* Assets.xcassets in Resources */,
-				846C2E681CCF951200E96BFA /* Main.storyboard in Resources */,
 				84494F0F1CEA0CED0020D7EE /* wrong.mp3 in Resources */,
 				8444177B1CD0F5FD00F4C722 /* vocabulary.plist in Resources */,
 			);
@@ -292,11 +314,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846C2E651CCF951200E96BFA /* ViewController.swift in Sources */,
+				846C2E651CCF951200E96BFA /* WordsViewController.swift in Sources */,
 				8469DD1C1CD25AE90016F747 /* MakeRandom.swift in Sources */,
 				844417801CD0F81000F4C722 /* Vocabulary.swift in Sources */,
 				846C2E631CCF951200E96BFA /* AppDelegate.swift in Sources */,
 				846C2E6B1CCF951200E96BFA /* TOICE_Starter.xcdatamodeld in Sources */,
+				84EE63691D0BFF7100E90926 /* SWRevealViewController.m in Sources */,
+				84EE636F1D0C12E100E90926 /* InfoViewController.swift in Sources */,
+				84EE636D1D0C12D000E90926 /* PronounViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,20 +357,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		846C2E661CCF951200E96BFA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				846C2E671CCF951200E96BFA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		846C2E6E1CCF951200E96BFA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				846C2E6F1CCF951200E96BFA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		84EE63701D0C14C500E90926 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84EE63711D0C14C500E90926 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -438,11 +463,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "TOICE Starter/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mango.TOICE-Starter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TOICE Starter/TOICE Starter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -451,11 +482,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "TOICE Starter/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mango.TOICE-Starter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TOICE Starter/TOICE Starter-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
