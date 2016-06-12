@@ -11,6 +11,10 @@ import UIKit
 class InfoViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var highScoreLabel: UILabel!
+    
+    
+    var highScore = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +24,10 @@ class InfoViewController: UIViewController {
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        self.updatingHighScore()
+        //print(highScore)
+        self.highScoreLabel.text = String(highScore)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,15 +35,12 @@ class InfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // load High Score
+    func updatingHighScore() {
+        let highScoreDefault = NSUserDefaults.standardUserDefaults()
+        if highScoreDefault.valueForKey("HighScore") != nil {
+            highScore = highScoreDefault.valueForKey("HighScore") as! Int
+        }
     }
-    */
-
 }

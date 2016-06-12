@@ -22,14 +22,12 @@ class WordsViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     var selectAnswer = ""
     var score = 0
+    var highScore = 0
     var words = [Word]()
     var newWords = [Word]()
     var shuffleNewWords = [Word]()
     let numberOfWords = 7
-    
     var audioPlayer = AVAudioPlayer()
-    
-    var colors = ["red","green","blue"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -131,6 +129,23 @@ class WordsViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
     }
     
+    func isHighScore(myScore: Int) {
+        if myScore > highScore {
+            highScore = myScore
+        }
+        
+        let highScoreDefault = NSUserDefaults.standardUserDefaults()
+        highScoreDefault.setValue(highScore, forKey: "HighScore")
+        highScoreDefault.synchronize()
+    }
+    
+    func loadHighScore() {
+        let highScoreDefault = NSUserDefaults.standardUserDefaults()
+        if highScoreDefault.valueForKey("HighScore") != nil {
+            highScore = highScoreDefault.valueForKey("HighScore") as! Int
+        }
+    }
+    
     
     
 
@@ -147,18 +162,27 @@ class WordsViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
                 
             }else {                                        // answer is wrong
                 playSound("wrong", fileType: "mp3")
+                let tempScore = score
+                self.isHighScore(tempScore)
                 score = 0
                 scoreLabel.text = String(score)
+                
                 words = Word.loadAllWords("vocabulary").shuffle()                // create new word array again, restart the game
-                throwAlert("You lose!", message: "Press OK to retart the game")
+                SweetAlert().showAlert("Game Over", subTitle: "Your scrore is: \(tempScore)", style: AlertStyle.Error)
+                self.changeBackgroundWithAnimation("day_image")
+                
                 
             }
         } else {                                                                // when user win the game
             playSound("win", fileType: "mp3")
+            let tempScore = score
+            self.isHighScore(tempScore)
             score = 0
             scoreLabel.text = String(score)
             words = Word.loadAllWords("vocabulary").shuffle()
-            throwAlert("You win!", message: "Press OK to retart the game")
+            SweetAlert().showAlert("You win", subTitle: "Your score is: \(tempScore)", style: AlertStyle.CustomImag(imageFile: "win_icon"))
+            self.changeBackgroundWithAnimation("day_image")
+            
             
         }
         

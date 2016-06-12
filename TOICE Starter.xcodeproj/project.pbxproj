@@ -24,6 +24,7 @@
 		84EE636D1D0C12D000E90926 /* PronounViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE636C1D0C12D000E90926 /* PronounViewController.swift */; };
 		84EE636F1D0C12E100E90926 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE636E1D0C12E100E90926 /* InfoViewController.swift */; };
 		84EE63721D0C14C500E90926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EE63701D0C14C500E90926 /* Main.storyboard */; };
+		84F368141D0D10AA00B3595D /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F368131D0D10AA00B3595D /* SweetAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		84EE636C1D0C12D000E90926 /* PronounViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PronounViewController.swift; sourceTree = "<group>"; };
 		84EE636E1D0C12E100E90926 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		84EE63711D0C14C500E90926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84F368131D0D10AA00B3595D /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,14 +136,13 @@
 		846C2E611CCF951200E96BFA /* TOICE Starter */ = {
 			isa = PBXGroup;
 			children = (
+				84F368151D0D10B800B3595D /* SweetAlert */,
 				84EE63651D0BFF5A00E90926 /* SWRevealViewController */,
+				84F368161D0D10C400B3595D /* Controllers */,
 				846C2E621CCF951200E96BFA /* AppDelegate.swift */,
-				846C2E641CCF951200E96BFA /* WordsViewController.swift */,
-				84EE636C1D0C12D000E90926 /* PronounViewController.swift */,
-				84EE636E1D0C12E100E90926 /* InfoViewController.swift */,
-				846C2E6C1CCF951200E96BFA /* Assets.xcassets */,
 				84EE63701D0C14C500E90926 /* Main.storyboard */,
 				846C2E6E1CCF951200E96BFA /* LaunchScreen.storyboard */,
+				846C2E6C1CCF951200E96BFA /* Assets.xcassets */,
 				846C2E711CCF951200E96BFA /* Info.plist */,
 				846C2E691CCF951200E96BFA /* TOICE_Starter.xcdatamodeld */,
 				8444177E1CD0F73E00F4C722 /* Data */,
@@ -176,6 +177,24 @@
 				84EE63661D0BFF7100E90926 /* TOICE Starter-Bridging-Header.h */,
 			);
 			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		84F368151D0D10B800B3595D /* SweetAlert */ = {
+			isa = PBXGroup;
+			children = (
+				84F368131D0D10AA00B3595D /* SweetAlert.swift */,
+			);
+			name = SweetAlert;
+			sourceTree = "<group>";
+		};
+		84F368161D0D10C400B3595D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				846C2E641CCF951200E96BFA /* WordsViewController.swift */,
+				84EE636C1D0C12D000E90926 /* PronounViewController.swift */,
+				84EE636E1D0C12E100E90926 /* InfoViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +335,7 @@
 			files = (
 				846C2E651CCF951200E96BFA /* WordsViewController.swift in Sources */,
 				8469DD1C1CD25AE90016F747 /* MakeRandom.swift in Sources */,
+				84F368141D0D10AA00B3595D /* SweetAlert.swift in Sources */,
 				844417801CD0F81000F4C722 /* Vocabulary.swift in Sources */,
 				846C2E631CCF951200E96BFA /* AppDelegate.swift in Sources */,
 				846C2E6B1CCF951200E96BFA /* TOICE_Starter.xcdatamodeld in Sources */,

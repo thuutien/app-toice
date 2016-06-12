@@ -516,12 +516,52 @@
                     <view key="view" contentMode="scaleToFill" id="yEY-3a-hXL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAS-1f-xae">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="51"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="86" width="360" height="146"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.1304647317" blue="0.27454188480000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aAS-1f-xae" firstAttribute="centerX" secondItem="yEY-3a-hXL" secondAttribute="centerX" id="G43-ow-mt6"/>
+                            <constraint firstItem="aAS-1f-xae" firstAttribute="trailing" secondItem="yEY-3a-hXL" secondAttribute="trailingMargin" id="UPa-aU-Xfk"/>
+                            <constraint firstItem="aAS-1f-xae" firstAttribute="top" secondItem="ibi-Gl-L4d" secondAttribute="bottom" constant="22" id="rNO-wx-GMX"/>
+                            <constraint firstItem="aAS-1f-xae" firstAttribute="leading" secondItem="yEY-3a-hXL" secondAttribute="leadingMargin" id="sTc-dA-rWS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aAS-1f-xae"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="G43-ow-mt6"/>
+                                <exclude reference="UPa-aU-Xfk"/>
+                                <exclude reference="rNO-wx-GMX"/>
+                                <exclude reference="sTc-dA-rWS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="aAS-1f-xae"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="G43-ow-mt6"/>
+                                <include reference="UPa-aU-Xfk"/>
+                                <include reference="rNO-wx-GMX"/>
+                                <include reference="sTc-dA-rWS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Info" id="O9z-qH-1yI">
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="KLJ-ME-htL"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="highScoreLabel" destination="aAS-1f-xae" id="XjC-sP-7i8"/>
                         <outlet property="menuButton" destination="KLJ-ME-htL" id="mxY-WO-WKa"/>
                     </connections>
                 </viewController>
