@@ -14,7 +14,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nqa-gR-gLD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.13046473169406894" blue="0.2745418848167539" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
                         <color key="sectionIndexBackgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="F6c-h2-qaQ">
@@ -64,7 +64,7 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.1304647317" blue="0.27454188480000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="cFY-9N-FO8">
                                         <rect key="frame" x="0.0" y="61" width="600" height="70"/>
@@ -142,7 +142,7 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.1304647317" blue="0.27454188480000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
                                         <connections>
                                             <segue destination="TgZ-Q5-yS9" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="FW2-jg-s9Y"/>
                                         </connections>
@@ -217,7 +217,7 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.1304647317" blue="0.27454188480000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
                                         <connections>
                                             <segue destination="YSq-YH-Lor" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="dQR-6D-bkv"/>
                                         </connections>
@@ -300,7 +300,7 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.1304647317" blue="0.27454188480000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" name="selectedKnobColor" catalog="System" colorSpace="catalog"/>
                                         <connections>
                                             <segue destination="acv-sW-J15" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="PDM-GA-MUI"/>
                                         </connections>
@@ -450,6 +450,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X7o-jc-bzM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="p8A-Uw-wS0">
@@ -495,6 +499,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eey-JX-ez2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -519,41 +527,64 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAS-1f-xae">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="51"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="150"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="86" width="360" height="146"/>
-                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your best score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhK-iz-uv7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.1304647317" blue="0.27454188480000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="fhK-iz-uv7" firstAttribute="centerX" secondItem="yEY-3a-hXL" secondAttribute="centerX" id="B3C-0x-i81"/>
                             <constraint firstItem="aAS-1f-xae" firstAttribute="centerX" secondItem="yEY-3a-hXL" secondAttribute="centerX" id="G43-ow-mt6"/>
                             <constraint firstItem="aAS-1f-xae" firstAttribute="trailing" secondItem="yEY-3a-hXL" secondAttribute="trailingMargin" id="UPa-aU-Xfk"/>
-                            <constraint firstItem="aAS-1f-xae" firstAttribute="top" secondItem="ibi-Gl-L4d" secondAttribute="bottom" constant="22" id="rNO-wx-GMX"/>
+                            <constraint firstItem="fhK-iz-uv7" firstAttribute="leading" secondItem="yEY-3a-hXL" secondAttribute="leadingMargin" constant="120" id="Y9o-O4-yEg">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="fhK-iz-uv7" secondAttribute="trailing" constant="120" id="ac6-kj-u6K">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="fhK-iz-uv7" firstAttribute="top" secondItem="ibi-Gl-L4d" secondAttribute="bottom" constant="8" id="jMW-7f-pLG"/>
+                            <constraint firstItem="aAS-1f-xae" firstAttribute="top" secondItem="ibi-Gl-L4d" secondAttribute="bottom" constant="22" id="rNO-wx-GMX">
+                                <variation key="widthClass=compact" constant="25"/>
+                            </constraint>
                             <constraint firstItem="aAS-1f-xae" firstAttribute="leading" secondItem="yEY-3a-hXL" secondAttribute="leadingMargin" id="sTc-dA-rWS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="aAS-1f-xae"/>
+                                <exclude reference="fhK-iz-uv7"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="G43-ow-mt6"/>
                                 <exclude reference="UPa-aU-Xfk"/>
                                 <exclude reference="rNO-wx-GMX"/>
                                 <exclude reference="sTc-dA-rWS"/>
+                                <exclude reference="B3C-0x-i81"/>
+                                <exclude reference="Y9o-O4-yEg"/>
+                                <exclude reference="ac6-kj-u6K"/>
+                                <exclude reference="jMW-7f-pLG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="aAS-1f-xae"/>
+                                <include reference="fhK-iz-uv7"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="G43-ow-mt6"/>
                                 <include reference="UPa-aU-Xfk"/>
                                 <include reference="rNO-wx-GMX"/>
                                 <include reference="sTc-dA-rWS"/>
+                                <include reference="B3C-0x-i81"/>
+                                <include reference="Y9o-O4-yEg"/>
+                                <include reference="ac6-kj-u6K"/>
+                                <include reference="jMW-7f-pLG"/>
                             </mask>
                         </variation>
                     </view>
@@ -574,9 +605,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="acv-sW-J15" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4CV-gk-ilZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" shadowImage="checked" id="4CV-gk-ilZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -595,6 +630,6 @@
         <image name="words-icon" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I3f-gv-Uuc"/>
+        <segue reference="FW2-jg-s9Y"/>
     </inferredMetricsTieBreakers>
 </document>
